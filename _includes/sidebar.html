@@ -1,0 +1,88 @@
+<section class="card">
+  <div class="card-header">Páginas</div>
+  <div class="card-block">
+    <nav class="list-group">
+      {% assign pages = site.pages %}
+      {% for data in pages %}
+      {% if data.title and data.group == 'pages' %}
+        <a href="{{ site.url }}{{ data.url }}" class="list-group-item {% if page.url contains data.url %}active{% endif %}">
+          {{ data.title }}
+        </a>
+      {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+
+<hr>
+
+<section>
+    <div class="alert alert-info alert-dismissible fade in" role="alert">
+      <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+      <span class="sr-only">Info:</span>
+      Inscreva-se <a href="{{ site.url }}/feed.xml">via RSS</a>
+    </div>
+</section>
+
+<hr>
+
+<section class="card">
+  <div class="card-header">Destaque</div>
+  <div class="card-block">
+    <h4 class="card-title">{{ site.title }}</h4>
+    <p class="card-text">{{ site.description }}</p>
+  </div>
+</section>
+
+<hr>
+
+<section class="card">
+  <div class="card-header">Autor</div>
+  <div class="card-block">
+    <nav>
+      <ul>
+        <li>
+          <a href="mailto:{{ site.author.email }}">
+            {{ site.author.email }}
+          </a>
+        </li>
+        {% if site.author.github %}
+          <li>
+            <a rel="author" href="https://github.com/{{ site.author.github }}">
+              <span class="glyphicon glyphicon-link"></span> GitHub
+            </a>
+          </li>
+        {% endif %}
+        {% if site.author.twitter %}
+          <li>
+            <a rel="author" href="https://twitter.com/{{ site.author.twitter }}">
+              <span class="glyphicon glyphicon-link"></span> Twitter
+            </a>
+          </li>
+        {% endif %}
+        {% if site.author.facebook %}
+          <li>
+            <a rel="author" href="https://facebook.com/{{ site.author.facebook }}">
+              <span class="glyphicon glyphicon-link"></span> Facebook
+            </a>
+          </li>
+        {% endif %}
+        {% if site.author.instagram %}
+          <li>
+            <a rel="author" href="https://instagram.com/{{ site.author.instagram }}">
+              <span class="glyphicon glyphicon-link"></span> Instagram
+            </a>
+          </li>
+        {% endif %}
+        {% if site.author.gplus %}
+          <li>
+            <a rel="author" href="https://plus.google.com/{{ site.author.gplus }}">
+              <span class="glyphicon glyphicon-link"></span> Google+
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</section>

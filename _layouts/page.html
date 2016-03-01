@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% include navbar.html %}
+{% include header.html %}
+
+<div id="wrapper">
+    <div class="container">
+        <div class="row">
+            <main id="content" class="col-md-{% if page.sidebar %}9{% else %}12{% endif %}" tabindex="-1">
+                <article class="page">
+                    <div class="entry-content">
+                        {{ content }}
+                    </div>
+                </article>
+            </main>
+            {% if page.sidebar %}
+            <aside id="sidebar" class="col-md-3">
+                {% include {{ page.sidebar | append: ".html" }} %}
+            </aside>
+            {% endif %}
+        </div>
+    </div>
+    <!-- .containter  -->
+</div>
+<!-- #wrapper  -->
+
+{% include footer.html %}

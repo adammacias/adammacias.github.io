@@ -1,0 +1,45 @@
+// Footer
+// ==========================================================================
+//
+// Sticky footer styles
+//
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 320px; // 60px margin-top
+}
+.footer-sticky {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 260px;
+  //line-height: 60px; /* Vertically center the text there */
+  //background-color: #f5f5f5;
+  //color: #fff;
+}
+
+.am-footer {
+  color: $am-white;
+  background: #1a3137; // $am-black; //#1a3137
+  //margin-top: 3rem;
+  padding-top: 3rem;
+  //padding-bottom: 3rem;
+  @extend .footer-sticky;
+  a {
+    color: $am-yellow;
+    &:hover { color:$am-red; }
+  }
+}
+
+.fa-diamond {
+  color: aqua;
+  margin-left: 5px;
+}
+
+//logo-bettercalladam.png
+//1a3137
+//eed860

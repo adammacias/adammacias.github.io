@@ -1,0 +1,148 @@
+# Author Data
+
+# > Set of icons representing programming languages, designing & development tools http://devicon.fr/
+# > http://www.flaticon.com/free-icon/github-logo_37318
+# > type: language workflow tool
+
+- id: android
+  name: Android
+  order: 100
+  type: workflow
+  img: /media/logos/android.png
+
+- id: bootstrap
+  name: Bootstrap
+  order: 100
+  type: workflow
+  img: /media/logos/bootstrap.png
+
+- id: codeigniter
+  name: CodeIgniter
+  order: 100
+  type: workflow
+  img: /media/logos/codeigniter.png
+
+- id: codepen
+  name: CodePen
+  order: 100
+  type: workflow
+  img: /media/logos/codepen.png
+
+- id: css3
+  name: CSS3
+  order: 100
+  type: language
+  img: /media/logos/css3.png
+
+- id: foundation
+  name: Foundation
+  order: 100
+  type: workflow
+  img: /media/logos/foundation.png
+
+- id: git
+  name: Git
+  date: 100
+  type: workflow
+  img: /media/logos/git.png
+
+- id: github
+  name: GitHub
+  date: 100
+  type: workflow
+  img: /media/logos/github.png
+
+- id: grunt
+  name: Grunt
+  order: 100
+  type: workflow
+  img: /media/logos/grunt.png
+
+- id: gulp
+  name: Gulp
+  order: 100
+  type: workflow
+  img: /media/logos/gulp.png
+
+- id: jekyll
+  name: Jekyll
+  order: 100
+  type: workflow
+  img: /media/logos/jekyll.png
+
+- id: html5
+  name: HTML5
+  date: 100
+  type: language
+  img: /media/logos/html5.png
+
+- id: illustrator
+  name: Illustrator
+  order: 100
+  type: workflow
+  img: /media/logos/illustrator.png
+
+- id: javascript
+  name: JavaScript
+  order: 100
+  type: language
+  img: /media/logos/javascript.png
+
+- id: jquery
+  name: JQuery
+  order: 100
+  type: workflow
+  img: /media/logos/jquery.png
+
+- id: less
+  name: LESS
+  order: 100
+  type: language
+  img: /media/logos/less.png
+
+- id: mysql
+  name: MySQL
+  order: 100
+  type: language
+  img: /media/logos/mysql.png
+
+- id: photoshop
+  name: Photoshop
+  order: 100
+  type: workflow
+  img: /media/logos/photoshop.png
+
+- id: php
+  name: PHP
+  order: 100
+  type: workflow
+  img: /media/logos/php.png
+
+- id: sass
+  name: SASS
+  order: 100
+  type: language
+  img: /media/logos/sass.png
+
+- id: sublimetext
+  name: Sublime Text
+  date: 100
+  type: workflow
+  img: /media/logos/sublimetext.png
+
+- id: trello
+  name: Trello
+  order: 100
+  type: workflow
+  img: /media/logos/trello.png
+
+- id: wordpress
+  name: WordPress
+  order: 100
+  type: workflow
+  img: /media/logos/wordpress.png
+
+
+
+
+

@@ -1,0 +1,114 @@
+---
+#layout: compress
+---
+<!DOCTYPE html>
+<html lang="pt-br" class="loading">
+<head>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | strip_html | strip_newlines | default: site.keywords }}">
+  <meta name="author" content="Adam Requena Macias">
+
+  <title>{{ page.title | default: site.title | strip_html | strip_newlines }}</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/app.css">
+
+  {% if page.css %}
+  <!-- Page Custom Stylesheet -->
+  <link rel="stylesheet" href="{{ page.css | to_urlabs }}">
+  {% endif %}
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
+</head>
+<body class="page-{{ page.url | | xml_escape | slugify | default: 'default'}}{% if page.ambb %} page-ambb{% endif %}">
+  <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <span class="skiplink-text">Pular para conteúdo</span>
+  </a>
+
+  <div id="loading">
+    <div class="loading-container">
+      <div class="loading-content">
+        <div id="smokeflat">
+          <span class="s0"></span>
+          <span class="s1"></span>
+          <span class="s2"></span>
+          <span class="s3"></span>
+          <span class="s4"></span>
+          <span class="s5"></span>
+          <span class="s6"></span>
+          <span class="s7"></span>
+          <span class="s8"></span>
+          <span class="s9"></span>
+        </div>
+        <span id="loading-monitor">
+          <img src="{{ site.url }}/media/theme-bb/loading-monitor.png" alt="">
+        </span>
+        <p>Cozinhando Página...</p>
+        <p id="progress">0%</p>
+      </div>
+    </div>
+  </div>
+
+  {{ content }}
+
+  <!-- JavaScript -->
+  {% if site.mode == "dev" %}
+  <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="{{ site.url }}/assets/js/preloadjs-0.4.1.min.js"></script>
+  <script src="{{ site.url }}/assets/js/preload.js"></script>
+  {% comment %}
+  <!--
+  <script src="{{ site.url }}/assets/js/vendor/tether.min.js"></script>
+  <script src="{{ site.url }}/assets/js/vendor/bootstrap.min.js"></script>
+  <script src="{{ site.url }}/assets/js/vendor/jquery.gifplayer.min.js"></script>
+  <script src="{{ site.url }}/assets/js/vendor/jquery.timeago.js"></script>
+  <script src="{{ site.url }}/assets/js/vendor/jquery.timeago.pt-br.js"></script>
+  <script src="{{ site.url }}/assets/js/vendor/jquery.fitvids.js"></script>
+
+  <script src="{{ site.url }}/assets/js/main.js"></script>-->
+  {% endcomment %}
+  {% else %}
+  <!--<script src="{{ site.url }}/assets/js/main.min.js"></script>-->
+  {% endif %}
+
+  <script src="{{ site.url }}/assets/js/main.min.js"></script>
+
+  {% comment %}
+  {% if page.lightgallery %}
+  <!--
+  <link rel="stylesheet" href="{{ site.url }}/assets/plugins/lightgallery/css/lightgallery.css">
+  <script src="{{ site.url }}/assets/plugins/lightgallery/js/lightgallery.min.js"></script>
+  <script src="{{ site.url }}/assets/plugins/lightgallery/js/lg-thumbnail.min.js"></script>
+  <script src="{{ site.url }}/assets/plugins/lightgallery/js/lg-fullscreen.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $(".lightgallery").lightGallery({
+      selector: '.lightgallery-item',
+      download: false,
+      counter: false,
+      thumbnail:true, {% comment %}//animateThumb: false,{% endcomment %}
+      showThumbByDefault: false
+    });
+  });
+  </script>-->
+  {% endif %}
+  {% endcomment %}
+
+  {% if page.image.background %}
+  <script src="{{ site.url }}/assets/plugins/header-intro-effect/header-intro-effect.min.js"></script>
+  {% endif %}
+
+  {% if page.js %}
+  <!-- Page Custom JavaScript -->
+  <script src="{{ page.js | to_urlabs }}"></script>
+  {% endif %}
+</body>
+</html>
+

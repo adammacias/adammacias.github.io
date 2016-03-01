@@ -1,0 +1,31 @@
+// Cards
+// ==========================================================================
+
+//
+// Background grays variations
+//
+
+// Body colors
+.card-body-bg {
+  @include card-variant($body-bg, $body-bg);
+}
+.card-body-color {
+  @include card-variant($body-color, $body-color);
+}
+
+// Grays colors
+.card-gray-dark {
+  @include card-variant($gray-dark, $gray-dark);
+}
+.card-gray {
+  @include card-variant($gray, $gray);
+}
+.card-gray-light {
+  @include card-variant($gray-light, $gray-light);
+}
+.card-gray-lighter {
+  @include card-variant($gray-lighter, $gray-lighter);
+}
+.card-gray-lightest {
+  @include card-variant($gray-lightest, $gray-lightest);
+}

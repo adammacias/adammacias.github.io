@@ -1,0 +1,35 @@
+# Build settings
+exclude: [ Gemfile, Gemfile.lock, gems, _assets, bower_components, src ]
+paginate: 10
+timezone: America/Sao_Paulo
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  auto_ids: true
+sass:
+    sass_dir: _sass
+    style: :compressed
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Site settings
+permalink: pretty
+title: Your awesome title
+description: > # Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus repudiandae dolore libero consequatur iste reiciendis saepe itaque.
+url: "http://adammacias.github.io" # your site's domain goes here (eg: //adammacias.github.io, http://adammacias.com, etc). when testing locally leave blank or use http://localhost:4000
+baseurl: "/jekyll-minion/" # the subpath of your site, e.g. /blog/
+
+# Custom variables
+version: 1.0
+analytics: UA-0000000-0
+author:
+  name: Adam Macias
+  url: http://adammacias.com
+  github: adammacias
+  twitter: adammacias
+  facebook: adam.requena.macias
+  instagram: adammacias
+  gplus: 117839494541292456644
+  email: eu@adammacias.com

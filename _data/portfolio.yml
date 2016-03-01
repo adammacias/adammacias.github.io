@@ -1,0 +1,165 @@
+# Author Data
+
+# > WordPress
+# > UX, UI Design
+# > Web Design
+# > Front-end
+# > Logo Identity
+
+# http://www.contabilidade-santos.com.br/
+# photofiltrestudio
+# sistema boleto acessom
+# app cafe perfeito / motiva-me windows 10
+
+
+- id: diversforsharks
+  name: Website Divers for Sharks
+  client: Divers for Sharks
+  agencia: false
+  team:
+    - name: Luiza Eloi
+      role: Design
+      url: https://www.fb.com/luiza.c.eloi
+  date: 2015-01-01
+  url: http://www.diversforsharks.com.br
+  description: "O Projeto Divers for Sharks é uma iniciativa internacional fundada por mergulhadores e apoiada por operadores de mergulho, mergulhadores profissionais e recreativos, e amigos da conservação dos oceanos."
+  tags: [Front-end, WordPress]
+  order: 10
+
+- id: planass
+  name: Website Planass
+  client: Planass
+  team:
+    - name: Foco Design
+      role: Agência
+      url: http://www.agfoco.com.br
+    - name: Henrique Foca
+      role: Design
+      url: https://www.behance.net/henriquefoca
+  date: 2015-01-01
+  url: http://planassarquitetura.com.br
+  description: "Dar forma, criar, mudar, transformar, a arquitetura é uma arte e o profissional da Planass está qualificado para conseguir captar suas ideias e transformá-las em realidade desenvolvendo projetos de arquitetura."
+  tags: [Front-end, UI/UX]
+  order: 20
+
+- id: fatecrl
+  name: Website Fatec Santos
+  client: Fatec Rubens Lara
+  team:
+    - name: Fatec Web
+      role: Equipe
+      url: http://fatecrl.edu.br/site/setores/web
+  date: 2015-01-01
+  url: http://www.fatecrl.edu.br
+  description: "A Fatec Rubens Lara é uma faculdade que têm como objetivo formar tecnólogos, profissionais cujas áreas de atuação são mais específicas em relação às demais modalidades de graduação."
+  tags: [Design, Front-end, UI/UX]
+  order: 20
+
+- id: docfoto
+  name: Website DOC Foto
+  client: DOC Foto
+  team:
+    - name: Estudio Xadrez
+      role: Agência
+      url: http://www.estudioxadrez.com.br
+  date: 2015-01-01
+  url: http://www.docfoto.com.br
+  description: "DOC Foto é um escritório para criação e produção de projetos ligados a fotografia e galeria especializada em imagem."
+  tags: [Front-end, WordPress]
+  order: 30
+
+- id: fatecrl-xxi-semanatecfatec
+  name: Hotsite XXI Semana de Tecnologia Fatec
+  client: Fatec Rubens Lara
+  team:
+    - name: Fatec Web
+      role: Equipe
+      url: http://fatecrl.edu.br/site/setores/web
+  date: 2015-01-01
+  url: http://fatecrl.edu.br/site/semana-de-tecnologia/
+  description: "A Semana de Tecnologia é um evento organizado anualmente pela unidade Fatec Baixada Santista - Rubens Lara e tem por objetivo proporcionar aos estudantes um momento de aprendizagem diferenciada."
+  tags: [Design, Front-end, UI/UX]
+  order: 30
+
+- id: sad
+  name: E-Commerce SAD
+  client: SAD
+  date: 2015-01-01
+  url: http://www.sad.com.br
+  description: "A SAD é uma empresa referência no mercado jurídico e sua principal atividade é a criação e venda de sistemas para Advogados em todo o Brasil."
+  tags: [Design, Back-end, Front-end]
+  order: 50
+
+- id: jajualimentos
+  name: Website Jaju Alimentos
+  client: Jaju Alimentos
+  team:
+    - name: Foco Design
+      role: Agência
+      url: http://www.agfoco.com.br
+    - name: Henrique Foca
+      role: Design
+      url: https://www.behance.net/henriquefoca
+  date: 2014-01-01
+  url: http://www.jajualimentos.com.br
+  description: "De origem familiar a empresa JAJU Alimentos possui uma estrutura participativa e profissional."
+  tags: [Front-end]
+  order: 60
+
+- id: hyperfilter
+  name: Website Hyper Filter
+  name: Hyper Filter
+  team:
+    - name: Foco Design
+      role: Agência
+      url: http://www.agfoco.com.br
+    - name: Henrique Foca
+      role: Design
+      url: https://www.behance.net/henriquefoca
+  date: 2014-01-01
+  url: http://www.hyperfilter.com
+  description: "A empresa internacional HyperFilter é especializada em serviços de proteção em DoS/DDoS."
+  tags: [Front-end, WordPress]
+  order: 70
+
+- id: globalcs
+  name: Global Construções e Serviços
+  date: 2014-01-01
+  url: http://www.globalcs.com.br
+  offline: true
+  description: "A Global Construções &amp; Serviços é uma empresa com mais de 30 anos de experiência e atua no ramo de Engenharia civil."
+  tags: [Design, Front-end]
+  order: 75
+  hidden: true
+
+- id: belaadm
+  name: Website Bela Imobiliária
+  client: Bela Administração
+  date: 2013-01-01
+  url: http://www.belaadm.com.br
+  description: "A Bela Administração foi fundada em julho de 1981, trabalhando com experiência e dedicação durante todos esses anos no seguimento de imóveis."
+  tags: [Design, Front-end, WordPress]
+  order: 80
+
+- id: karenmaia
+  name: Website Karen Maia
+  client: Karen Maia
+  date: 2013-01-01
+  url: http://www.karenmaia.com.br
+  description: "Portfolio e CV da publicitária Karen Castilho Maia."
+  tags: [Front-end]
+  order: 90
+  hidden: true
+
+- id: centroavante
+  name: Website Centro Avante
+  client: Projeto Centro Avante
+  date: 2012-01-01
+  url: http://www.centroavante.org.br
+  description: "O Projeto Centro Avante tem como objetivo, estimular o desenvolvimento sócio-desportivo de crianças e adolescentes em seu aspecto social."
+  tags: [Design, Front-end, WordPress]
+  order: 100
+
+
+
+

@@ -1,0 +1,21 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);  // font-family: 'Roboto Condensed', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);       // font-family: 'Roboto Slab', serif;
+
+// ==========================================================================
+// Style Custom Bootstrap
+// ==========================================================================
+
+/*!
+{{ site.title }} Custom Bootstrap
+version: {{ site.version }}
+*/
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "variables";              // Theme          Custom Variables
+@import "bootstrap/bootstrap";    // Bootstrap      Styles Core
+
+

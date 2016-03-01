@@ -1,0 +1,57 @@
+{% if page.title %}
+{% if page.image.background %}
+<header id="header">
+  <div class="header-content">
+    <div class="content-bg bg-inverse">
+      <div class="content-bg-image" style="background-image: url('{{ page.image.background | to_urlabs }}')"></div>
+    </div>
+    <div class="content-text">
+      <h1 class="display-3">{{ page.title }}</h1>
+      <p class="lead">{{ page.description | strip_html | strip_newlines | truncate: 160 }}</p>
+      {% if page.date %}
+      <p>
+        <br>&#8212;<br><br>
+        <i class="fa fa-pencil fa-fw"></i>&nbsp; Receita por <strong>Adam Macias</strong><br>
+        <i class="fa fa-clock-o fa-fw"></i>&nbsp; Fabricado <strong><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %b %Y" }}</time></strong>
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  <button class="btn btn-link trigger">
+    <i class="fa fa-angle-double-down fa-2x scroll-down-animate" aria-hidden="true"></i>
+    <span class="sr-only">Leia Mais</span>
+  </button>
+</header>
+{% else %}
+<header id="header" class="jumbotron jumbotron-fluid bg-inverse">
+  <div class="container">
+    <h1 class="display-3">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="lead">{{ page.description | strip_html | strip_newlines | truncate: 160 }}</p>
+    {% endif %}
+  </div>
+</header>
+{% endif %}
+{% endif %}
+
+{% comment %}
+{% if page.image.background %}
+<style type="text/css">
+  .jumbotron {
+    /**height: 100vmin;**/
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url({{ page.image.background | to_urlabs }});
+
+    background-attachment:fixed;
+
+    {% if page.image.background_outline %}
+    color: white;
+    {% endif %}
+  }
+</style>
+{% endif %}
+{% endcomment %}

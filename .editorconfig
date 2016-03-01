@@ -1,0 +1,18 @@
+# editorconfig.org
+# https://github.com/twbs/bootstrap/blob/v4-dev/.editorconfig
+# https://github.com/wpbrasil/odin/blob/master/.editorconfig
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.py]
+indent_size = 4

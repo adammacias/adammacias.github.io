@@ -1,0 +1,19 @@
+// Buttons
+// ==========================================================================
+
+//
+// Outline button for use within the docs
+//
+.btn-outline {
+    color: blueviolet;
+    background-color: transparent;
+    border-color: blueviolet;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+    color: #fff;
+    background-color: blueviolet;
+    border-color: blueviolet;
+}

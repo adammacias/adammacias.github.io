@@ -1,0 +1,36 @@
+# > UX, UI Design (Elementos para Web Design)
+# > Web Design (Design da Página)
+# > Front-end (HTML,CSSm,JS, Jekyll)
+# > Back-end (PHP, WordPress, CodeIgniter, WooCommerce)
+# > Logo Identity (Marca)
+# > Mobile (Apps)
+
+- id: uxui
+  name: UX and UI Design
+  price: 10.0
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium exercitationem consectetur!"
+
+- id: webdesign
+  name: Web Design
+  price: 10.0
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium exercitationem consectetur!"
+
+- id: frontend
+  name: Front-end
+  price: 10.0
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium exercitationem consectetur!"
+
+- id: backend
+  name: Back-end
+  price: 10.0
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium exercitationem consectetur!"
+
+- id: branding
+  name: Branding
+  price: 10.0
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium exercitationem consectetur!"
+
+- id: mobile
+  name: Mobile
+  price: 10.0
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium exercitationem consectetur!"

@@ -1,0 +1,43 @@
+{% assign gallery = include.gallery %}
+{% assign captions = include.controls | default: true %}
+{% assign id = include.id | default: "default" %}
+{% assign description = include.description %}
+
+{% assign cols = include.cols %}
+{% case cols %}
+    {% when 2 %}
+        {% assign cols_class = "col-sm-6 col-md-6 col-lg-6" %}
+    {% when 3 %}
+        {% assign cols_class = "col-sm-6 col-md-4 col-lg-4" %}
+    {% when 4 %}
+        {% assign cols_class = "col-sm-6 col-md-3 col-lg-3" %}
+    {% when 6 %}
+        {% assign cols_class = "col-sm-6 col-md-2 col-lg-2" %}
+    {% else %}
+        {% assign cols_class = "col-sm-6 col-md-12 col-lg-12" %}
+{% endcase %}
+
+<figure id="lightgallery-{{ id }}" class="lightgallery lightgallery-grid">
+  <div class="row">
+    {% for image in gallery %}
+    <div class="{{ cols_class }}">
+      <div class="card lightgallery-item" data-src="{{ image.src | to_absurl }}" data-sub-html=".lightgallery-caption-{{ image.src | xml_escape | slugify }}" {{ image.href-attrs }}>
+        <img class="card-img img-fluid" src="{{ image.src | to_absurl }}" alt="{{ image.title }}" />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if description %}<figcaption>{{ description }}</figcaption>{% endif %}
+</figure>
+
+{% for image in gallery %}
+{% if captions %}
+  {% if image.title or image.description %}
+  <div class="lightgallery-caption lightgallery-caption-{{ image.src | xml_escape | slugify }}">
+    {% if image.title %}<h3>{{ image.title }}</h3>{% endif %}
+    {% if image.description %}<p>{{ image.description }}</p>{% endif %}
+  </div>
+  {% endif %}
+{% endif %}
+{% endfor %}
+

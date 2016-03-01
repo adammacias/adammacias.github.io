@@ -1,0 +1,26 @@
+<!-- Pagination links -->
+<nav>
+	<ul class="pager">
+		{% if paginator.previous_page %}
+			<li class="pager-prev">
+        <a href="{{ site.url }}{{ paginator.previous_page_path }}"><span aria-hidden="true">&larr;</span> Recentes</a>
+      </li>
+		{% else %}
+			<li class="pager-prev disabled">
+        <a href="#"><span aria-hidden="true">&larr;</span> Recentes</a>
+      </li>
+		{% endif %}
+		  <li>
+        <span class="page_number ">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+      </li>
+		{% if paginator.next_page %}
+			<li class="pager-next">
+        <a href="{{ site.url }}{{ paginator.next_page_path }}">Antigos <span aria-hidden="true">&rarr;</span></a>
+        </li>
+		{% else %}
+			<li class="pager-next disabled">
+        <a href="#">Antigos <span aria-hidden="true">&rarr;</span></a>
+        </li>
+		{% endif %}
+	</ul>
+</nav>

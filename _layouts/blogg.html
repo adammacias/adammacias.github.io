@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+{% include navbar.html %}
+
+<div id="wrapper">
+    <div class="container">
+      <div class="row">
+          <main id="content" class="col-md-9" role="main" tabindex="-1">
+            <section class="entry-posts-recents">
+                <h2>Posts <small>Recents</small></h2>
+                {% assign posts = paginator.posts %}
+                {% for post in posts %}
+                <article class="card">
+                  {% if post.image != null %}
+                    <img class="card-img-top img-fluid" src="{{ post.image.feature | to_absurl }}" alt="{{ post.image.credit }}">
+                  {% endif %}
+                  <div class="card-block">
+                    <h4 class="card-title">
+                        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h4>
+                    <p class="card-text">{{ post.description }}</p>
+                    <p class="card-text">
+                      <small class="text-muted">Publicado
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+                        {% if post.categories.first != null %} &nbsp;—&nbsp;
+                          {% for tag in post.categories %}
+                            <a href ="{{ site.url }}/arquivo/index.html#ref-{{ post.categories | cgi_encode }}">{{ tag | capitalize }}</a>
+                            {% unless forloop.last %}&nbsp;{% endunless %}
+                          {% endfor %}
+                        {% endif %}
+                      </small>
+                    </p>
+                  </div>
+                </article>
+                {% endfor %}
+                {% include pagination.html %}
+            </section>
+          </main>
+          <aside id="sidebar" class="col-md-3" role="complementary">
+            {% include sidebar.html %}
+          </aside>
+      </div>
+    </div><!-- .containter  -->
+</div><!-- #wrapper  -->
+
+{% include footer.html %}

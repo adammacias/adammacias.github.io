@@ -1,0 +1,46 @@
+{% assign gallery = include.gallery %}
+{% assign indicators = include.indicators | default: true %}
+{% assign controls = include.controls | default: true %}
+{% assign captions = include.controls | default: true %}
+{% assign id = include.id | default: "default" %}
+{% assign interval = include.interval | default: false %}
+
+<div id="carousel-{{ id }}" class="carousel slide" data-ride="carousel" {% if interval %}data-interval="{{ include.interval }}"{% endif %}>
+  {% if indicators %}
+  <ol class="carousel-indicators">
+    {% for image in gallery %}
+    <li data-target="#carousel-{{ id }}" data-slide-to="{{ forloop.index0 }}" class="{% if image.src == gallery.first %} active {% endif %}"></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  <div class="carousel-inner" role="listbox">
+    {% for image in gallery %}
+    <div class="carousel-item {% if image == gallery.first %} active {% endif %}">
+      {% if image.href %}<a href="{{ image.href | to_absurl }}" {{ image.href-attrs }}>{% endif %}
+        <img src="{{ image.src | to_absurl }}" alt="{{ image.title }}" />
+        {% if captions %}
+          {% if image.title or image.description %}
+          <div class="carousel-caption">
+            {% if image.title %}<h3>{{ image.title }}</h3>{% endif %}
+            {% if image.description %}<p>{{ image.description }}</p>{% endif %}
+          </div>
+          {% endif %}
+        {% endif %}
+      {% if image.href %}</a>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% if controls %}
+  <a class="left carousel-control" href="#carousel-{{ id }}" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-{{ id }}" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+  {% endif %}
+</div>
+
+
+

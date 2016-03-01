@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+{% include navbar.html %}
+{% include header.html %}
+
+<div id="wrapper">
+    <div class="container">
+        <div class="row">
+            <main id="content" class="col-md-{% if page.sidebar %}9{% else %}12{% endif %}" tabindex="-1">
+                <article class="post">
+                    <div class="entry-content">
+                        {{ content }}
+                    </div>
+                    <hr>
+                    <div class="entry-meta">
+                        <p class="text-muted">Publicado
+                            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %b %Y" }}</time>
+                            {% if page.categories.first != null %}
+                            &nbsp;—&nbsp;
+                            {% for tag in page.categories %}
+                            <a href="{{ site.url }}/arquivo/index.html##ref-{{ page.categories | cgi_encode }}">{{ tag | capitalize }}</a>
+                            {% unless forloop.last %}&nbsp;{% endunless %}
+                            {% endfor %}
+                            {% endif %}
+                        </p>
+                    </div>
+                </article>
+            </main>
+            {% if page.sidebar %}
+            <aside id="sidebar" class="col-md-3">
+                {% include {{ page.sidebar | append: ".html" }} %}
+            </aside>
+            {% endif %}
+        </div>
+    </div>
+    <!-- .containter  -->
+</div>
+<!-- #wrapper  -->
+
+{% include footer.html %}

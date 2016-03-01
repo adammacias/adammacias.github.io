@@ -1,0 +1,37 @@
+body, html {
+  overflow: hidden;
+  background-color: black;
+}
+#header {
+  background: rgba(0, 0, 0, 0.6)!important;
+  position: absolute;
+  padding-left: 25px;
+  top:0;
+  left:0px;
+  bottom:0;
+  width: 35%;
+  max-width: 400px;
+  height: 100%;
+  z-index: 10;
+}
+#header h1, #header p {
+  background: transparent!important;
+  text-align: left!important;
+  padding-top: 0!important;
+}
+#header h1 {
+  font-size: 8rem;
+}
+
+#header p {
+  font-size: 2.5rem;
+}
+.am-navbar, #footer {
+  display:none;
+}
+
+.video {
+  min-width: 100%!important;
+  min-height: 100vmin!important;
+  border:0;
+}

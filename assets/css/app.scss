@@ -1,0 +1,109 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+// ==========================================================================
+// Style App
+// ==========================================================================
+
+/*!
+Theme Name: {{ site.title }} Site
+Author URI: https://github.com/adammacias/jekyll-minion
+Description: Minion main stylesheet.
+Author: {{ site.author.name }}
+Author URI: {{ site.author.url }}
+Version: {{ site.version }}
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// Dev notes
+//
+// Background information on nomenclature and architecture decisions here.
+//
+// - Bootstrap variables and mixins are included for easy reuse.
+//   Doing so gives us access to the same core utilities provided by Bootstrap.
+//   For example, consistent media queries through those mixins.
+//
+// - Bootstrap's **docs variables** are prefixed with `%bd-`.
+//   These custom colors avoid collision with the components Bootstrap provides.
+//
+// - Classes are prefixed with `.bd-`.
+//   These classes indicate custom-built or modified components for the design
+//   and layout of the Bootstrap docs. They are not included in our builds.
+//
+// Import partials from `sass_dir` (defaults to `_sass`)
+//
+// Happy Bootstrapping!
+
+// Load Custom variables and Bootstrap variables and mixins
+@import "variables";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Local docs variables
+//blueviolet;
+$am-white:         #FFFFFF;
+$am-black:         #000000;
+$am-blue:          #0084B4;
+$am-navy:          #1a3137;
+$am-green:         $brand-primary; // #2EBD59;
+$am-lime:          #D0EA2B;
+$am-yellow:        #E5D504; // #FF0
+$am-orange:        #e0ac0a;
+$am-red:           #FF040E;
+
+$am-purple:        blueviolet;
+$am-pink:         magenta ;
+
+// Load fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);  // font-family: 'Roboto Condensed', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);       // font-family: 'Roboto Slab', serif;
+
+//html {overflow-y:hidden!important;} // porcause do nicescroll https://github.com/inuyaksa/jquery.nicescroll
+
+// Style Custom Bootstrap
+@import "bootstrap/bootstrap";    // Bootstrap      Styles Core
+
+/*!
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+//$fa-font-path:        "../fonts";
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts"; // for referencing Bootstrap CDN font files directly
+@import "font-awesome/variables";
+@import "font-awesome/mixins";
+@import "font-awesome/path";
+@import "font-awesome/core";
+@import "font-awesome/larger";
+@import "font-awesome/fixed-width";
+@import "font-awesome/list";
+//@import "font-awesome/bordered-pulled";
+//@import "font-awesome/animated";
+//@import "font-awesome/rotated-flipped";
+//@import "font-awesome/stacked";
+@import "font-awesome/icons";
+
+// Load app components
+@import "app/loading";
+@import "app/buttons";
+@import "app/cards";
+@import "app/lightgallery";
+@import "app/pygments-manni";
+@import "app/skiplink";
+@import "app/navbar";
+@import "app/main";
+@import "app/header";
+@import "app/content";
+@import "app/sidebar";
+@import "app/footer";
+@import "app/util";
+@import "app/gifplayer";
+
+//@import "app/404";
+
+// Load docs dependencies
+//@import "lightgallery";
+
+
+

@@ -1,0 +1,14 @@
+// Utilitys
+// ==========================================================================
+
+//
+// Show grids columns
+//
+.row {
+  &.show-cols [class^="col-"] {
+    background-color: rgba(86,61,124,.15);
+    outline: 1px solid rgba(86,61,124,.2);
+    outline-offset: 0px;
+    min-height: 1em;
+  }
+}

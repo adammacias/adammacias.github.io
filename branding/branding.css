@@ -1,0 +1,21 @@
+/* Style Branding */
+
+hr {
+  background: #F5F5F5;
+  margin: 3em 0;
+}
+
+h2[id] {
+  border-left: 4px solid #000000;
+  padding: 0.5em 1em;
+}
+
+h3[id] {
+  margin-top: 1em;
+}
+
+.img-featured {
+  width: 140%;
+  margin-left: -20%;
+}
+

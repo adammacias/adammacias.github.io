@@ -1,0 +1,13 @@
+# Gallery Sample
+- src: "/media/girl.jpg"
+  href: "http://www.adammacias.com.br"
+  title: "Menina"
+  description: "Only a beautiful girl"
+- src: "/media/shark.jpg"
+  title: "Tubarao"
+  description: "It is a big shark"
+- src: "http://images7.alphacoders.com/592/592106.jpg"
+  title: "Image extern of GitHub"
+- src: "http://cdn.collider.com/wp-content/uploads/2015/05/game-of-thrones-image-sons-of-the-harpy-rosabell-laurenti-sellers.jpg"
+- src: "http://blogs-images.forbes.com/insertcoin/files/2015/06/snow1-e1434299165356-1940x1093.jpg"
+- src: "http://screencrush.com/442/files/2015/11/JS-Teased.jpg"

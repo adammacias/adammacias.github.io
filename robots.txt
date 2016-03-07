@@ -1,0 +1,7 @@
+# www.robotstxt.org/
+User-agent: *
+Disallow: /tags*
+Disallow: /tag*
+Disallow: /404.html
+Allow: /
+Sitemap: http://adammacias.github.io/sitemap.xml

@@ -13814,6 +13814,7 @@ html.page-home,
   animation-duration: 2s;
 }
 .page-home.loaded .banner .table-2 {
+  display: none;
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
   -webkit-animation-duration: 12s;

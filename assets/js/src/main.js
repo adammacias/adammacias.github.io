@@ -12,13 +12,13 @@
 
   //http://rubentd.com/gifplayer/
   //https://github.com/rubentd/gifplayer
-  /**/
+  /*
   $(function() {
     $('#portfolio-diversforsharks .gifplayer, #portfolio-planass .gifplayer').gifplayer({
       //wait: true,
       //label: ''
     });
-  });
+  });*/
 
 
   /**/
@@ -115,12 +115,12 @@
     //$(this).trigger('click');//$('.gifplayer').find('a').trigger('click');
   //});
 
-jQuery(document).ready(function() {
+/*jQuery(document).ready(function() {
     $('#portfolio-diversforsharks').find('.gifplayer').trigger('click');
     $('#portfolio-planass').find('.gifplayer').trigger('click');
 
 
   //$('html,body').animate({scrollTop: 0}, 1700);
 
-});
+});*/
 

@@ -31,10 +31,10 @@ function setupManifest() {
     // IMAGES BACKGROUNDS
     { src:  urlSite + '/uploads/header-breakingbad-1.png' },
     { src:  urlSite + '/uploads/header-breakingbad-2.png' },
-    { src:  urlSite + '/uploads/header-breakingbad-3.png' },
-    { src:  urlSite + '/uploads/header-breakingbad-4.png' },
-    { src:  urlSite + '/uploads/header-breakingbad-5.png' },
-    { src:  urlSite + '/uploads/header-breakingbad-6.png' }
+    { src:  urlSite + '/uploads/header-breakingbad-3.png' }//,
+    //{ src:  urlSite + '/uploads/header-breakingbad-4.png' },
+    //{ src:  urlSite + '/uploads/header-breakingbad-5.png' },
+    //{ src:  urlSite + '/uploads/header-breakingbad-6.png' }
   ];
 
   manifestHome = [
@@ -46,6 +46,12 @@ function setupManifest() {
     { id:   'smoke_2', src:  urlSite + '/uploads/breakingbad-assets/smoke_2.png' },
     { id:   'smoke_3', src:  urlSite + '/uploads/breakingbad-assets/smoke_3.png' },
     { id:   'breaking_bad_audio_ogg', src:  urlSite + '/uploads/breakingbad-assets/audio/breaking_bad_intro.ogg' } //http://www.createjs.com/tutorials/SoundJS%20and%20PreloadJS/
+  ];
+
+  manifestPortfolio = [
+  // AMBB
+    { src:  urlSite + '/uploads/portfolio/diversforsharks.gif' },
+    { src:  urlSite + '/uploads/portfolio/planass.gif'}
   ];
 
   //for(var i=1;i<=13;i++)
@@ -63,6 +69,7 @@ function startPreload() {
     preload.on('fileprogress', onFileProgress);
     preload.on('progress',     onProgress);
 
+    preload.loadManifest(manifest);
 
     if( $html.hasClass('page-home') ){
       preload.loadManifest(manifestHome);
@@ -72,7 +79,10 @@ function startPreload() {
       $('#ascrail2000').hide();
       $('#ascrail2000-hr').hide();
     }
-    preload.loadManifest(manifest);
+    if( $html.hasClass('page-portfolio') ){
+      preload.loadManifest(manifestPortfolio);
+    }
+
 }
 
 

@@ -23,7 +23,7 @@ var preload, // queue        = new createjs.LoadQueue(),
 function setupManifest() {
   manifest = [
     // CSS
-
+    { id:   'css-app', src:  urlSite + '/assets/css/app.css' },
     // IMAGES ASSETS
     { src:  urlSite + '/uploads/breakingbad-assets/periodic_table-bg.png' },
     { src:  urlSite + '/uploads/breakingbad-assets/logo-bettercalladam.png' },
@@ -39,12 +39,12 @@ function setupManifest() {
 
   manifestHome = [
   // AMBB
+    { id:   'periodic_table', src:  urlSite + '/uploads/breakingbad-assets/periodic_table.png' },
     { id:   'ambb.min.js', src:  urlSite + '/assets/js/home.min.js'},
     { id:   'smoke', src:  urlSite + '/uploads/breakingbad-assets/smoke.png' },
     { id:   'smoke_1', src:  urlSite + '/uploads/breakingbad-assets/smoke_1.png' },
     { id:   'smoke_2', src:  urlSite + '/uploads/breakingbad-assets/smoke_2.png' },
     { id:   'smoke_3', src:  urlSite + '/uploads/breakingbad-assets/smoke_3.png' },
-    { id:   'periodic_table', src:  urlSite + '/uploads/breakingbad-assets/periodic_table.png' },
     { id:   'breaking_bad_audio_ogg', src:  urlSite + '/uploads/breakingbad-assets/audio/breaking_bad_intro.ogg' } //http://www.createjs.com/tutorials/SoundJS%20and%20PreloadJS/
   ];
 

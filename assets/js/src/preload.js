@@ -94,7 +94,7 @@ function onComplete(event) {
   if( $html.hasClass('page-home') ){
     document.getElementById('audio-breakingbad').play();
   }
-  console.log("BluSky done!");
+  console.log("Yeah Bitch! BlueSky done! :)");
   $html.removeClass('loading').addClass('loaded');
 
 

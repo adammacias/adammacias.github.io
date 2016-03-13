@@ -87,7 +87,7 @@
             formReset = $('#form-contact-reset'),
             formSubmit = $('#form-contact-submit'),
             formSubmitBudget = $('#form-budget-submit'),
-            formDataRequired = $('input[name="name"], input[name="email"], textarea[name="message"], textarea[name="budget-message"], input[name="budget-money"]'); // , textarea[name="message"]
+            formDataRequired = $('input[name="name"], input[name="email"]'); // , , textarea[name="message"], textarea[name="budget-message"], input[name="budget-money"]
           // Validate Formddds
           formDataRequired.blur(function(){
               if ( $(this).val().length === 0 ) $(this).parent().addClass('has-danger');

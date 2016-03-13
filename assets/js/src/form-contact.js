@@ -2,7 +2,7 @@
 	"use strict";
 
   // FORM CONTACT BASIC
-  var hiddenInputs = "#in-email, #in-subject, #in-budget, #in-budget-money, #in-budget-message, #in-message, #btn-form-contact, #btn-form-budget",
+  var hiddenInputs = "#in-email, #in-subject, #in-budget, #in-budget-money, #in-budget-message, #in-message, #form-contact-submit, #form-budget-submit",
       getNameValue = ".getNameValue",
       //inName = "#in-name",
       inNameValue = '#in-name-value',
@@ -13,11 +13,11 @@
       inSubjectLabelMessage = "#in-subject-label-message", //$('input[name="in-subject-value-message"]');
       inSubjectLabelBudget = "#in-subject-label-budget",
       inMessage = "#in-message",
-      btnMessage = '#btn-form-contact',
+      btnMessage = '#form-contact-submit',
       inBudget = "#in-budget",
       inBudgetMoney = "#in-budget-money",
       inBudgetMessage = "#in-budget-message",
-      btnBudget = '#btn-form-budget';
+      btnBudget = '#form-budget-submit';
 
   $(hiddenInputs).hide();
 
@@ -78,6 +78,75 @@
     }
   });
 */
+
+    $(function() {
+        // Settings Form
+        var form = $('#form-contact'),
+            formRespond = $('#form-contact-respond'),
+            formAction = 'http://www.adammacias.com.br/includes/ajax-form.php',
+            formReset = $('#form-contact-reset'),
+            formSubmit = $('#form-contact-submit'),
+            formSubmitBudget = $('#form-budget-submit'),
+            formDataRequired = $('input[name="name"], input[name="email"], textarea[name="message"], textarea[name="budget-message"], input[name="budget-money"]'); // , textarea[name="message"]
+          // Validate Formddds
+          formDataRequired.blur(function(){
+              if ( $(this).val().length === 0 ) $(this).parent().addClass('has-danger');
+              else $(this).parent().removeClass('has-danger');
+          });
+          // Send Form
+          $(formSubmit).click(function (){
+            var formData = {
+                //action: '$('input[name="action"]').val()',// 'prefix_form',
+                //security: $('input[name="security"]').val(),
+                action: 'contact',
+                data: $( ":input" ).serializeArray()
+            }
+            formRespond.html( '<div class="alert alert-info" role="alert"><i class="fa fa-spinner fa-spin"></i> Enviando dados... </div>');
+              $(formSubmit).prop('disabled', true);
+              $.ajax({ type: 'POST', dataType: 'json', url: formAction, data: formData,
+                  success: function (data, textStatus, XMLHttpRequest) {
+                    console.log(formData);
+                    console.log(data +'---' + textStatus  +'---' + XMLHttpRequest);
+                    console.log( data.status +  ':' + data.text);
+                      if ( data.status == 'error' ) {
+                        formRespond.html( '<div class="alert alert-danger" role="alert">' + data.text + '</div>');
+                      } else if ( data.status == 'success' ) {
+                        formRespond.html( '<div class="alert alert-success" role="alert">' + data.text + '</div>');
+                        formReset.trigger( "click" );
+                      }
+                      $(formSubmit).prop('disabled', false);
+                  }
+              });
+          });
+
+          $(formSubmitBudget).click(function (){
+            var formData = {
+                //action: '$('input[name="action"]').val()',// 'prefix_form',
+                //security: $('input[name="security"]').val(),
+                action: 'budget',
+                data: $( ":input" ).serializeArray()
+            }
+            formRespond.html( '<div class="alert alert-info" role="alert"><i class="fa fa-spinner fa-spin"></i> Enviando dados... </div>');
+              $(formSubmit).prop('disabled', true);
+              $.ajax({ type: 'POST', dataType: 'json', url: formAction, data: formData,
+                  success: function (data, textStatus, XMLHttpRequest) {
+                    console.log(formData);
+                    console.log(data +'---' + textStatus  +'---' + XMLHttpRequest);
+                    console.log( data.status +  ':' + data.text);
+                      if ( data.status == 'error' ) {
+                        formRespond.html( '<div class="alert alert-danger" role="alert">' + data.text + '</div>');
+                      } else if ( data.status == 'success' ) {
+                        formRespond.html( '<div class="alert alert-success" role="alert">' + data.text + '</div>');
+                        formReset.trigger( "click" );
+                      }
+                      $(formSubmit).prop('disabled', false);
+                  }
+              });
+          });
+
+      })
+
+
 
 
 }(jQuery));

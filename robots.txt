@@ -4,4 +4,4 @@ Disallow: /tags*
 Disallow: /tag*
 Disallow: /404.html
 Allow: /
-Sitemap: http://bb.adammacias.com.br/sitemap.xml
+Sitemap: //adammacias.com.br/sitemap.xml
